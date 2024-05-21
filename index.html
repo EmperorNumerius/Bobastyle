@@ -3,14 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Numerius Airplane Site</title>
+    <title>Airplanes</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
         <h1>Airplanes</h1>
         <nav>
             <ul>
+                <li><a href="#home">Home</a></li>
                 <li><a href="#history">History</a></li>
                 <li><a href="#types">Types</a></li>
                 <li><a href="#gallery">Gallery</a></li>
@@ -18,28 +20,75 @@
             </ul>
         </nav>
     </header>
+
+    <section id="home">
+        <div class="hero">
+            <h2>Welcome to the World of Airplanes</h2>
+            <p>Explore the fascinating world of aviation and learn about the history, types, and stunning images of airplanes.</p>
+            <button onclick="scrollToSection('history')">Learn More</button>
+        </div>
+    </section>
+
     <section id="history">
         <h2>History of Airplanes</h2>
         <p>The history of airplanes dates back to the early 20th century. The Wright brothers are credited with inventing and building the world's first successful airplane in 1903. Since then, aviation technology has advanced significantly, leading to the development of various types of aircraft for different purposes, including commercial, military, and recreational use.</p>
     </section>
+
     <section id="types">
         <h2>Types of Airplanes</h2>
-        <p>Airplanes come in various types, each designed for specific purposes. Commercial airplanes are used for transporting passengers and cargo. Military aircraft include fighters, bombers, and transport planes. There are also private jets, gliders, and ultralight aircraft designed for recreational flying.</p>
+        <div class="card">
+            <h3>Commercial Airplanes</h3>
+            <p>Commercial airplanes are used for transporting passengers and cargo. They are designed for efficiency and safety, with the ability to travel long distances.</p>
+        </div>
+        <div class="card">
+            <h3>Military Aircraft</h3>
+            <p>Military aircraft include fighters, bombers, and transport planes. They are equipped with advanced technology and weaponry for defense and combat operations.</p>
+        </div>
+        <div class="card">
+            <h3>Private Jets</h3>
+            <p>Private jets offer luxury and convenience for personal or business travel. They provide privacy and flexibility for their owners.</p>
+        </div>
     </section>
+
     <section id="gallery">
         <h2>Gallery</h2>
         <div class="gallery">
             <img src="https://source.unsplash.com/800x600/?airplane" alt="Airplane 1">
             <img src="https://source.unsplash.com/800x600/?aircraft" alt="Airplane 2">
             <img src="https://source.unsplash.com/800x600/?jet" alt="Airplane 3">
+            <img src="https://source.unsplash.com/800x600/?flight" alt="Airplane 4">
+            <img src="https://source.unsplash.com/800x600/?aviation" alt="Airplane 5">
+            <img src="https://source.unsplash.com/800x600/?cockpit" alt="Airplane 6">
         </div>
     </section>
+
     <section id="contact">
         <h2>Contact</h2>
-        <p>If you have any questions or would like more information, please contact us at <a href="mailto:krishnamohanmeda@gmail.com">nkrishnamohanmeda@gmail.com</a>.</p>
+        <p>If you have any questions or would like more information, please contact us at <a href="mailto:info@airplanes.com">info@airplanes.com</a>.</p>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
     </section>
+
     <footer>
-        <p>&copy; 2024 Emperor numerius</p>
+        <p>&copy; 2024 Airplanes Website</p>
+        <div class="socials">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
     </footer>
+
+    <script>
+        function scrollToSection(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
 </body>
 </html>
